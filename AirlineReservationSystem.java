@@ -24,14 +24,14 @@ class AirlineReservationSystem extends JFrame implements ActionListener {
         inputPanel.add(nameField);
 
         inputPanel.add(new JLabel("Time"));
-        String[]time={"10:00AM","21:00PM","12:00"};
+        String[]time={"10:00AM","21:00PM","12:00PM"};
         timeComboBox=new JComboBox<>(time);
         inputPanel.add(timeComboBox);
 
         inputPanel.add(new JLabel("Date"));
         String[]date={"10/04/2024","21/06/2024","12/08/2024"};
-        dateComboBox=new JComboBox<>(date);
-         inputPanel.add(dateComboBox);
+           timeComboBox=new JComboBox<>(time);
+         inputPanel.add(timeComboBox);
         
 
         inputPanel.add(new JLabel("Seat Type: "));
