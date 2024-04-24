@@ -7,6 +7,8 @@ class AirlineReservationSystem extends JFrame implements ActionListener {
     private JComboBox<String> seatTypeComboBox;
     private JButton reserveButton;
     private JTextArea displayArea;
+    @SuppressWarnings("rawtypes")
+    private JComboBox timeComboBox;
 
     public AirlineReservationSystem() {
         setTitle("Airline Reservation System");
@@ -14,14 +16,27 @@ class AirlineReservationSystem extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        JPanel inputPanel = new JPanel(new GridLayout(3, 2));
+        JPanel inputPanel = new JPanel(new GridLayout(3, 3));
         inputPanel.add(new JLabel("Name: "));
         nameField = new JTextField();
         inputPanel.add(nameField);
+
+        inputPanel.add(new JLabel("Time"));
+        String[]time={"10:00AM","21:00PM","12:00"};
+        timeComboBox=new JComboBox<>(time);
+        inputPanel.add(timeComboBox);
+
+        inputPanel.add(new JLabel("Date"));
+        String[]date={"10/04/2024","21/06/2024","12/08/2024"};
+           timeComboBox=new JComboBox<>(time);
+         inputPanel.add(timeComboBox);
+        
+
         inputPanel.add(new JLabel("Seat Type: "));
         String[] seatTypes = {"Economy", "Business", "First Class"};
         seatTypeComboBox = new JComboBox<>(seatTypes);
         inputPanel.add(seatTypeComboBox);
+
         reserveButton = new JButton("Reserve");
         reserveButton.addActionListener(this);
         inputPanel.add(reserveButton);
