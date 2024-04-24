@@ -22,7 +22,7 @@ class AirlineReservationSystem extends JFrame implements ActionListener {
         inputPanel.add(nameField);
 
         inputPanel.add(new JLabel("Time"));
-        String[]time={"10:00AM","21:00PM","12:00"};
+        String[]time={"10:00AM","21:00PM","12:00PM"};
         timeComboBox=new JComboBox<>(time);
         inputPanel.add(timeComboBox);
 
