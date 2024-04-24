@@ -9,6 +9,8 @@ class AirlineReservationSystem extends JFrame implements ActionListener {
     private JTextArea displayArea;
     @SuppressWarnings("rawtypes")
     private JComboBox timeComboBox;
+    @SuppressWarnings("rawtypes")
+    private JComboBox dateComboBox;
 
     public AirlineReservationSystem() {
         setTitle("Airline Reservation System");
@@ -28,8 +30,8 @@ class AirlineReservationSystem extends JFrame implements ActionListener {
 
         inputPanel.add(new JLabel("Date"));
         String[]date={"10/04/2024","21/06/2024","12/08/2024"};
-           timeComboBox=new JComboBox<>(time);
-         inputPanel.add(timeComboBox);
+        dateComboBox=new JComboBox<>(date);
+         inputPanel.add(dateComboBox);
         
 
         inputPanel.add(new JLabel("Seat Type: "));
